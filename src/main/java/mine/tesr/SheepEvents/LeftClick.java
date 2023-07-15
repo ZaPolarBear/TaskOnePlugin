@@ -21,7 +21,7 @@ public class LeftClick implements Listener {
     @EventHandler
     public void onClick(EntityDamageByEntityEvent e){
         if(e.getEntityType() == EntityType.SHEEP && e.getDamager().getType() == EntityType.PLAYER){
-            e.setDamage(0);
+            e.setCancelled(true);
             sheep = (Sheep) e.getEntity();
             DyeColor randColor = DyeColor.values()[ rand(0, DyeColor.values().length-1) ];
             sheep.setColor(randColor);
