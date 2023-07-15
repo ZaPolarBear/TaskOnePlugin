@@ -1,0 +1,4 @@
+name: Tesr
+version: '${project.version}'
+main: mine.tesr.Tesr
+api-version: 1.20
